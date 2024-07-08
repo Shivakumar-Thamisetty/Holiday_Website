@@ -1,16 +1,13 @@
-function number(n) {
-    for(let x=1; x<=n; x++){
-        if(x % 3 == 0 && x % 5 == 0){
-            console.log("FizzBuzz");
-        }
-        else if(x % 3 == 0){
-            console.log("Fizz");
-        }
-        else if(x % 5 == 0){
-            console.log("Buzz");
-        }
-        else {console.log(x);}
-    }
-}
+document.addEventListener("DOMContentLoaded", function() {
+    const contactUsTab = document.getElementById("contact-us-tab");
+    const contactUsSection = document.getElementById("contact-us-section");
 
-number(15)
+    contactUsTab.addEventListener("click", function(event) {
+        event.preventDefault();
+        if (contactUsSection.style.display === "none") {
+            contactUsSection.style.display = "block";
+        } else {
+            contactUsSection.style.display = "none";
+        }
+    });
+});
